@@ -25,7 +25,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", 'zh-Hans'],
   },
 
   presets: [
@@ -72,6 +72,20 @@ const config = {
         },
         items: [
           ...require("./socials.js"),
+          {
+            type: 'localeDropdown',
+            position: 'right',
+            dropdownItemsAfter: [
+              {
+                type: 'html',
+                value: '<hr style="margin: 0.3rem 0;">',
+              },
+              {
+                href: 'https://crowdin.com/project/lazyvim',
+                label: 'Help Us Translate',
+              },
+            ],
+          },
         ],
       },
       footer: {
